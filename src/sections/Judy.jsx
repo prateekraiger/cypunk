@@ -35,7 +35,7 @@ const Judy = () => {
         </div>
       </div>
 
-      <div className="lg:w-1/2 lucia-life-content">
+      <div className="lg:w-1/2 judy-life-content">
         <div className="max-w-xl lg:ps-32 ps-10">
           <h1>Judy Alvarez</h1>
           <h2>A skilled braindance technician with a strong moral compass.</h2>
@@ -44,7 +44,7 @@ const Judy = () => {
           </p>
         </div>
 
-        <div className="lucia-2">
+        <div className="judy-2">
           <img src="/images/Judy-2.webp" />
         </div>
 
