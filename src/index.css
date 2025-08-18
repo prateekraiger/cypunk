@@ -184,7 +184,7 @@ main {
     }
   }
   .post-card {
-    @apply relative flex justify-center items-center pb-80 shadow-2xl;
+    @apply relative flex justify-center items-center pb-80 shadow-2xl h-screen;
 
     .animated-gradient-bg {
       @apply absolute w-full md:h-[200vh] h-[220vh] left-0 xl:-bottom-1/2 md:-bottom-5/6;
@@ -244,7 +244,7 @@ main {
 }
 
 .animated-gradient-bg {
-  background: linear-gradient(135deg, #000000 0%, #ff00ff 50%, #fcee0a 100%);
+  background: linear-gradient(135deg, #000000 0%, #fcee0a 100%);
 }
 
 .v-content {
