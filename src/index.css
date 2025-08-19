@@ -78,7 +78,7 @@ main {
       @apply object-cover md:scale-125 h-full;
     }
     .title-logo {
-      @apply absolute h-full md:scale-125 top-0 object-cover;
+      @apply absolute w-96 top-0 left-1/2 -translate-x-1/2;
     }
     .trailer-logo {
       @apply absolute -bottom-5 w-48 left-1/2 -translate-x-1/2;
@@ -191,10 +191,18 @@ main {
     }
 
     .post-card-wrapper {
-      @apply xl:mx-56 md:mx-12 mx-5 xl:h-[85vh] md:h-[40vh] h-[30vh] w-full flex justify-center items-center overflow-hidden relative;
+      @apply xl:mx-20 md:mx-5 mx-2 xl:h-[95vh] md:h-[60vh] h-[50vh] w-full flex justify-center items-center overflow-hidden relative;
 
       video {
-        @apply w-full h-full 2xl:scale-x-105 object-cover;
+        @apply w-full h-full 2xl:scale-x-105 object-cover will-change-transform;
+      }
+
+      .video-border-wrapper {
+        @apply relative p-2 border-2 border-transparent transition-all duration-300 ease-in-out;
+      }
+
+      .video-border-wrapper:hover {
+        @apply border-yellow scale-[1.01] shadow-lg;
       }
 
       img {
@@ -239,12 +247,12 @@ main {
 }
 
 .mask-wrapper {
-  mask-image: url("/images/big-hero-text.svg");
+  /* mask-image: url("/images/big-hero-text.svg"); */
   mask-repeat: no-repeat;
 }
 
 .animated-gradient-bg {
-  background: linear-gradient(135deg, #333333 0%, #CCCC66 100%);
+  background-color: black;
 }
 
 .v-content {

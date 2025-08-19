@@ -1,9 +1,20 @@
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 const PostCard = () => {
   const videoRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(true);
+
+  const handlePlayPause = () => {
+    if (videoRef.current.paused) {
+      videoRef.current.play();
+      setIsPlaying(true);
+    } else {
+      videoRef.current.pause();
+      setIsPlaying(false);
+    }
+  };
 
   useGSAP(() => {
     const tl = gsap.timeline({
@@ -16,15 +27,7 @@ const PostCard = () => {
     });
 
     videoRef.current.onloadedmetadata = () => {
-      tl.to(
-        videoRef.current,
-        {
-          currentTime: videoRef.current.duration,
-          duration: 3,
-          ease: "power1.inOut",
-        },
-        "<"
-      );
+      // Removed currentTime animation to prevent lag
     };
   });
 
@@ -33,19 +36,22 @@ const PostCard = () => {
       <div className="animated-gradient-bg" />
 
       <div className="post-card-wrapper group hover:rotate-1 hover:-[1.02] transition duration-700">
-        <img src="/images/overlay.webp" />
+        <div className="video-border-wrapper">
+          <video
+            ref={videoRef}
+            muted
+            playsInline
+            autoPlay
+            preload="auto"
+            src="/videos/postcard-vd.mp4"
+          />
+        </div>
 
-        <video
-          ref={videoRef}
-          muted
-          playsInline
-          autoPlay
-          preload="auto"
-          src="/videos/postcard-vd.mp4"
-        />
-
-        <button className="group-hover:bg-yellow transation duration-700">
-          Explore Night City
+        <button
+          className="group-hover:bg-yellow transation duration-700"
+          onClick={handlePlayPause}
+        >
+          {isPlaying ? "Pause Video" : "Play Video"}
         </button>
       </div>
     </section>
