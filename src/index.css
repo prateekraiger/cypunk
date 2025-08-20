@@ -211,7 +211,7 @@ main::before {
   
   .cyber-border {
     border: 2px solid;
-    border-image: linear-gradient(45deg, #00FFFF, #FF00FF, #00FF00, #FF4500) 1;
+    border-image: linear-gradient(45deg, #00FFFF, #0088FF, #00FFFF, #0088FF) 1;
     position: relative;
   }
   
@@ -222,7 +222,7 @@ main::before {
     left: -2px;
     right: -2px;
     bottom: -2px;
-    background: linear-gradient(45deg, #00FFFF, #FF00FF, #00FF00, #FF4500);
+    background: linear-gradient(45deg, #00FFFF, #0088FF, #00FFFF, #0088FF);
     z-index: -1;
     opacity: 0.5;
     filter: blur(10px);
@@ -256,7 +256,7 @@ main::before {
     @apply w-dvw overflow-x-hidden;
   }
   nav {
-    @apply fixed top-0 left-0 w-full flex justify-between items-center md:p-16 p-5 z-[100];
+    @apply fixed top-0 left-0 w-full flex justify-between items-center md:py-6 md:px-10 py-3 px-5 z-[100];
     background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 255, 255, 0.1) 50%, rgba(0, 0, 0, 0.8) 100%);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(0, 255, 255, 0.3);
@@ -323,7 +323,7 @@ main::before {
       @apply text-cyber-pink md:text-5xl text-3xl mb-7 md:pe-20 pe-10;
     }
     p {
-      @apply text-white md:text-2xl text-lg md:pe-28 pe-14;
+      @apply text-white text-xl md:text-3xl lg:text-4xl md:pe-28 pe-14;
     }
     .v-1 {
       @apply bg-black lg:h-[80vh] w-auto -translate-x-5;
@@ -360,27 +360,27 @@ main::before {
       @apply text-pink md:text-5xl text-3xl mb-7 md:pe-20 pe-10;
     }
     p {
-      @apply text-white md:text-2xl text-lg md:pe-28 pe-14;
+      @apply text-white text-xl md:text-3xl lg:text-4xl md:pe-28 pe-14;
     }
     p:last-of-type {
       @apply md:hidden block xl:block;
     }
     .judy-1 {
-      @apply bg-yellow lg:h-[90vh] w-auto -translate-x-5;
+      @apply bg-black lg:h-[95vh] lg:w-[40%] -translate-x-5;
 
       img {
         @apply size-full object-cover [object-position:5%_center] hover:scale-[0.98] transition duration-700 ease-in-out;
       }
     }
     .judy-2 {
-      @apply bg-yellow lg:h-[60vh] lg:w-[70%] w-[80%] md:my-36 my-20 lg:-translate-x-5 translate-x-5;
+      @apply bg-black lg:h-[65vh] lg:w-[75%] w-[80%] md:my-36 my-20 lg:-translate-x-5 translate-x-5;
 
       img {
         @apply size-full object-cover [object-position:80%_center] hover:scale-x-[0.98] hover:scale-y-[0.98] transition duration-700 ease-in-out;
       }
     }
     .judy-3 {
-      @apply bg-yellow lg:h-[100vh] md:w-[60%] -translate-x-5;
+      @apply bg-black lg:h-[105vh] md:w-[65%] -translate-x-5;
 
       img {
         @apply size-full object-cover [object-position:42%_center] hover:scale-x-[0.98] hover:scale-y-[0.99] transition duration-700 ease-in-out;

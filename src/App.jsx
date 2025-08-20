@@ -20,13 +20,13 @@ const App = () => {
   useEffect(() => {
     // Prevent scrolling during loading
     if (isLoading) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     }
 
     return () => {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     };
   }, [isLoading]);
 
@@ -37,19 +37,20 @@ const App = () => {
   return (
     <>
       {isLoading && <CyberpunkLoader onComplete={handleLoadingComplete} />}
-      
-      <main className={`transition-opacity duration-1000 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
+
+      <main
+        className={`transition-opacity duration-1000 ${
+          isLoading ? "opacity-0" : "opacity-100"
+        }`}
+      >
         <NavBar />
         <Hero />
 
-        <FirstVideo />
         <V />
 
-        <SecondVideo />
         <Judy />
 
         <PostCard />
-        <Final />
       </main>
     </>
   );

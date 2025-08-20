@@ -9,58 +9,7 @@ const Judy = () => {
   useGSAP(() => {
     gsap.set(".judy-life", { marginTop: "-80vh" });
 
-    gsap.to(
-      ".judy-life .img-box",
-      {
-        scrollTrigger: {
-          trigger: ".judy-life",
-          start: "top center",
-          end: "80% center",
-          scrub: 2,
-        },
-        y: -300,
-        duration: 1,
-        ease: "power1.inOut",
-      },
-      "<"
-    );
-
-    // Cyberpunk hologram effects
-    gsap.fromTo(".judy-profile", {
-      opacity: 0,
-      scale: 0.8,
-      rotationY: -30
-    }, {
-      opacity: 1,
-      scale: 1,
-      rotationY: 0,
-      duration: 1.5,
-      scrollTrigger: {
-        trigger: ".judy-life",
-        start: "top 70%",
-        end: "30% center",
-        scrub: 1
-      }
     });
-
-    // Neural network animation
-    gsap.to(".neural-line", {
-      strokeDashoffset: -1000,
-      duration: 3,
-      repeat: -1,
-      ease: "none"
-    });
-
-    // Data corruption effect
-    gsap.to(".glitch-judy", {
-      x: () => Math.random() * 4 - 2,
-      y: () => Math.random() * 4 - 2,
-      duration: 0.1,
-      repeat: -1,
-      yoyo: true,
-      repeatDelay: Math.random() * 3 + 1
-    });
-  });
 
   const techSpecs = [
     { label: "BRAINDANCE_TECH", value: "EXPERT", status: "ONLINE" },
@@ -104,16 +53,7 @@ const Judy = () => {
               alt="Judy Alvarez"
             />
             
-            {/* Holographic overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-cyan-400/20 via-transparent to-magenta-400/20 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-            
-            {/* Bio readout */}
-            <div className="absolute top-2 left-2 font-mono text-xs text-cyan-400 opacity-0 group-hover:opacity-100 transition-all duration-300">
-              <div>[SCAN_MODE: ACTIVE]</div>
-              <div>[ID: JUDY_ALVAREZ]</div>
-              <div>[STATUS: HOSTILE]</div>
             </div>
-          </div>
         </div>
         
         <div className="judy-3 relative group">
@@ -124,16 +64,7 @@ const Judy = () => {
               alt="Judy Alvarez Tech"
             />
             
-            {/* Tech interface overlay */}
-            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
-              <div className="bg-black/80 p-4 rounded border border-cyan-400 font-mono text-cyan-400 text-xs">
-                <div className="text-center mb-2 text-sm">TECH_ANALYSIS</div>
-                <div>BD_SKILL: EXPERT</div>
-                <div>HACK_LVL: 8/10</div>
-                <div>THREAT: MODERATE</div>
-              </div>
             </div>
-          </div>
         </div>
       </div>
 
@@ -195,38 +126,7 @@ const Judy = () => {
               alt="Judy Alvarez Main"
             />
             
-            {/* Biometric Display */}
-            <div className="absolute top-4 right-4 glassmorphism p-3 rounded opacity-0 group-hover:opacity-100 transition-all duration-500">
-              <div className="text-xs font-mono text-cyan-400 space-y-1">
-                <div className="text-center mb-2 text-sm">BIOMETRIC_DATA</div>
-                {biometricData.map((data, index) => (
-                  <div key={index} className="flex justify-between space-x-4">
-                    <span className={`text-${data.color}-400`}>{data.metric}:</span>
-                    <span className="text-white">{data.value}</span>
-                  </div>
-                ))}
-              </div>
             </div>
-            
-            {/* Neural Activity Visualization */}
-            <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-500">
-              <div className="h-8 border border-cyan-400 rounded bg-black/50 flex items-center px-2 space-x-1">
-                {[...Array(20)].map((_, i) => (
-                  <div
-                    key={i}
-                    className="w-1 bg-cyan-400 rounded-full animate-pulse"
-                    style={{
-                      height: `${Math.random() * 100 + 10}%`,
-                      animationDelay: `${i * 0.1}s`
-                    }}
-                  ></div>
-                ))}
-              </div>
-              <div className="text-xs font-mono text-cyan-400 mt-1 text-center">
-                NEURAL_PATTERN_ANALYSIS
-              </div>
-            </div>
-          </div>
         </div>
 
         {/* Enhanced Character Analysis */}

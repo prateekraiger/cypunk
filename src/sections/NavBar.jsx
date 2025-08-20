@@ -25,7 +25,7 @@ const NavBar = () => {
         <div className="relative">
           <img 
             src="/images/nav-logo.svg" 
-            className="scale-90 cyber-glow-cyan transition-all duration-300 hover:scale-100" 
+            className="scale-100 cyber-glow-cyan transition-all duration-300 hover:scale-105" 
             alt="Cyberpunk Logo"
           />
           <div className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-60"></div>
@@ -46,7 +46,7 @@ const NavBar = () => {
       </div>
 
       {/* Center - Navigation Links */}
-      <div className="hidden lg:flex items-center space-x-8 font-mono text-sm">
+      <div className="hidden lg:flex items-center space-x-8 font-mono text-base">
         {['INTERFACE', 'CHARACTERS', 'SYSTEMS', 'DATA'].map((item, index) => (
           <button
             key={item}
@@ -63,10 +63,10 @@ const NavBar = () => {
       <div className="flex items-center space-x-6">
         {/* Digital Clock */}
         <div className="hidden md:flex flex-col items-end font-mono">
-          <div className="text-cyan-400 text-sm cyber-glow-cyan">
+          <div className="text-cyan-400 text-base cyber-glow-cyan">
             {formatTime(time)}
           </div>
-          <div className="text-xs text-cyan-400/60">
+          <div className="text-sm text-cyan-400/60">
             {time.toLocaleDateString('en-US', { 
               month: 'short', 
               day: '2-digit', 
