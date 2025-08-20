@@ -2,7 +2,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useState, useEffect } from "react";
 
-import { useMaskSettings } from "../../constants";
+import { useMaskSettings } from "../constants";
 
 const Hero = () => {
   const { initialMaskPos, initialMaskSize, maskPos, maskSize } =

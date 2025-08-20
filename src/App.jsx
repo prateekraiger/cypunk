@@ -9,6 +9,8 @@ import FirstVideo from "./sections/FirstVideo";
 import V from "./sections/V";
 import SecondVideo from "./sections/SecondVideo";
 import Judy from "./sections/Judy.jsx";
+import Johnny from "./sections/Johnny";
+import Panam from "./sections/Panam";
 import PostCard from "./sections/PostCard";
 import Final from "./sections/Final";
 
@@ -49,6 +51,10 @@ const App = () => {
         <V />
 
         <Judy />
+
+        <Johnny />
+
+        <Panam />
 
         <PostCard />
       </main>

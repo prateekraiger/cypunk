@@ -1,13 +1,23 @@
 {
-  "name": "cyberpunk_landing",
+  "name": "cyberpunk-neural-interface",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "packageManager": "pnpm@10.15.0",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "lint:fix": "eslint . --fix",
+    "preview": "vite preview",
+    "clean": "rm -rf dist node_modules .pnpm-store",
+    "reinstall": "pnpm clean && pnpm install",
+    "start": "pnpm dev",
+    "pm2:dev": "pm2 start ecosystem.config.cjs",
+    "pm2:stop": "pm2 stop cyberpunk-dev-server",
+    "pm2:restart": "pm2 restart cyberpunk-dev-server",
+    "pm2:logs": "pm2 logs cyberpunk-dev-server --nostream",
+    "pm2:status": "pm2 status"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
